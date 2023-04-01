@@ -1,0 +1,41 @@
+doctype html
+html
+    head
+        title Seznam úkolů
+        link(rel='stylesheet'
+href='https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css')
+    body
+        header.jumbotron-fluid.bg-warning.p-5
+            h1.text-center.text-white #{nadpis}
+    
+    main.container
+        table(class="table")
+            thead
+                tr.bg-info.text-light
+                    th Jméno
+                    th Příjmení
+                    th Email
+                    th Ulice
+                    th Město 
+                    th Odebrání
+            tbody
+                each zapis in zapisy
+                    tr
+                        td #{zapis.jmeno}
+                        td #{zapis.prijmeni}
+                        td #{zapis.email}
+                        td #{zapis.ulice}
+                        td #{zapis.mesto}
+                        td #{zapis.odebrani}
+    hr
+    br
+    br
+    footer.bg-dark.p-5
+        .container.text-white
+            p.float-right
+            p.text-white.text-center Viktorie Mazurová
+                br
+                a(href="/") Vrátit se zpět
+        
+script(src='https://code.jquery.com/jquery-3.4.1.slim.min.js')
+script(src='https://getbootstrap.com/docs/4.4/dist/js/bootstrap.bundle.min.js')
